@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Time Converter",
+    "version": "1.0",
+    "description": "Converts time from PT, CT, and CEST to GMT",
+    "permissions": ["activeTab", "storage", "notifications"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
